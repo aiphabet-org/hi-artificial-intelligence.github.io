@@ -7,7 +7,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size:100%;
     font:inherit;
     font-family: NoahFont;
-} 
+}
+
+.center {
+  height: 50%; 
+  overflow: auto; 
+  margin: auto; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  border: solid black;
+}
 
 html, body { 
   overflow: auto; 
@@ -68,7 +80,7 @@ p {
   display: block; /* Make the links appear below each other */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove underline from links */
-  font-size: 20px;
+  font-size: 18px;
 }
 
 a:hover {
