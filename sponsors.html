@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Hi-AI Learn</title>
+    <title>Hi-AI Sponsors</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -35,15 +35,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link active" href="learn.html" style="color: #1E90FF; font-size: 40px;">Learn </a>
+                    <a class="nav-link" href="learn.html" style="color: #1E90FF; font-size: 40px;">Learn </a>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">
-                        <a class="nav-link" href="about.html" style="color: #1E90FF; font-size: 40px;">About</a>
+                        <a class="nav-link active" href="about.html" style="color: #1E90FF; font-size: 40px;">About</a>
                         <div class="dropdown-content">
                             <a href="about.html">Mission</a>
                             <a href="team.html">Our Team</a>
-                            <a href="sponsors.html">Sponsors</a>
+                            <a class="active" href="sponsors.html">Sponsors</a>
                         </div>
                     </div>
                 </li>
@@ -55,28 +55,10 @@
     </nav>
 
     <!-- Content -->
-    <div style="min-width: 1400px;">
-        <div id="topics" class="vertical-menu" style="text-align: center; float: left; height: 450px; padding-top: 2.5%; padding-left: 2.5%;">
-            <a href="#" class="active" onclick="return check(this)">Introduction to AI</a>
-            <a href="#" onclick="return check(this)"> Search </a>
-            <a href="#" onclick="return check(this)"> Games </a>
-            <a href="#" onclick="return check(this)"> Logical Agents </a>
-            <a href="#" onclick="return check(this)"> Supervised Learning </a>
-            <a href="#" onclick="return check(this)"> Unsupervised Learning </a>
-            <a href="#" onclick="return check(this)"> Neural Networks </a>
-            <a href="#" onclick="return check(this)"> Constraint Satisfaction Problems </a>
-            <a href="#" onclick="return check(this)"> Reinforcement Learning </a>
-            <a href="#" onclick="return check(this)"> Applications of AI </a>
-            <a href="#" onclick="return check(this)"> AI and Ethics </a>
-            <!-- style="color: #A9A9A9" removed from COMING SOON topics! -->
+    <div class="container">
+        <div class="row" style="padding-top: 20%;">
+            <p style="background-color: white; box-shadow: inset 0 0 2px #311b0b; font-family: Trebuchet MS, Helvetica, sans-serif; padding: 7.5px; border-radius: 5px;"> We are thankful for Google Tensorflow and the Cox Family for their support in starting our initiative. <p>
         </div>
-
-        <div id="contents">
-            <div style="width: 75%; margin: 0 auto; text-align: center; float: left; padding-top: 2.5%; padding-left: 1%;">
-                <iframe src="https://www.youtube.com/embed/YYt1_AiJi38" width="650px" height="475px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-        </div>
-
     </div>
 	
     <!-- jQuery -->
@@ -85,26 +67,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script>
-        function check(e) {
-            e = e || window.event;
-            var targ = e.target || e.srcElement || e;
-            if (targ.nodeType == 3) targ = targ.parentNode; // defeat Safari bug
-
-            $('#topics a').removeClass();
-            e.className = "active";
-
-            if (e.text == 'Introduction to AI') {
-                 $("#contents").html("<div style='width: 75%; margin: 0 auto; text-align: center; float: left; padding-top: 2.5%; padding-left: 1%;'><iframe src='https://www.youtube.com/embed/YYt1_AiJi38' width='650px' height='475px' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe></div>");
-            }
-            else {
-                $("#contents").html("<div style='width: 75%; margin: 0 auto; text-align: center; float: left; padding-top: 15.0%; padding-left: 0%;'><p style='font-size: 50px; font-family: Trebuchet MS, Helvetica, sans-serif;'> COMING SOON! <p></div>");
-            }
-        }
-    </script>
-
 </body>
 
 </html>
-
 
