@@ -11,6 +11,9 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -55,39 +58,199 @@
     </nav>
 
     <!-- Content -->
-    <div style="min-width: 1400px;">
-        <div id="topics" class="vertical-menu" style="text-align: center; float: left; height: 450px; padding-top: 2.5%; padding-left: 2.5%;">
-            <a href="#" class="active" onclick="return check(this)">Introduction to AI</a>
-            <a href="#" onclick="return check(this)"> Search </a>
-            <a href="#" onclick="return check(this)"> Games </a>
-            <a href="#" onclick="return check(this)"> Logical Agents </a>
-            <a href="#" onclick="return check(this)"> Supervised Learning </a>
-            <a href="#" onclick="return check(this)"> Unsupervised Learning </a>
-            <a href="#" onclick="return check(this)"> Neural Networks </a>
-            <a href="#" onclick="return check(this)"> Constraint Satisfaction Problems </a>
-            <a href="#" onclick="return check(this)"> Reinforcement Learning </a>
-            <a href="#" onclick="return check(this)"> Applications of AI </a>
-            <a href="#" onclick="return check(this)"> AI and Ethics </a>
-            <!-- style="color: #A9A9A9" removed from COMING SOON topics! -->
+    <div id="body-row" style="width: 100%; min-width: 1200px; margin: 0 auto; text-align: center;">
+        <div id="sidebar-container" class="sidebar-expanded d-none d-md-block" style="float: left;">
+            <ul class="list-group">
+                <a href="#" data-toggle="sidebar-colapse" class="list-group-item list-group-item-action d-flex align-items-center">
+                    <span id="collapse-icon" class="fa fa-2x mr-3" style="margin-left: 5px;"></span>
+                    <span id="collapse-text" class="menu-collapsed">Collapse</span>
+                </a>
+                <a href="#" id="welcome_link" class="list-group-item list-group-item-action text-white active" onclick="return check(this);">
+                    <span> 👋 </span>
+                    <span class="menu-collapsed">&nbsp;Welcome</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <a href="#submenu0" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action">
+                    <span> 📚 </span>
+                    <span class="menu-collapsed">&nbsp;Background</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu0' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed">Probability</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed">Statistics</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed">Linear Algebra</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed">Programming</span>
+                    </a>
+                </div>
+                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <span> 1. </span>
+                    <span class="menu-collapsed">&nbsp;Introduction to AI</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu1' class="collapse sidebar-submenu">
+                    <a href="#" id="1video1_link" class="list-group-item list-group-item-action text-white" style="display: flex; justify-content: center; align-items: center;" onclick="return check(this);">
+                        <span> 🎥 </span>
+                        <span class="menu-collapsed">&nbsp;Video 1: Introduction </span>
+                    </a>
+                    <a href="#" id="1video2_link" class="list-group-item list-group-item-action text-white" style="display: flex; justify-content: center; align-items: center;" onclick="return check(this);">
+                        <span> 🎥 </span>
+                        <span class="menu-collapsed">&nbsp;Video 2: The History of AI </span>
+                    </a>
+                    <a href="#" id="1video3_link" class="list-group-item list-group-item-action text-white" style="display: flex; justify-content: center; align-items: center;" onclick="return check(this);">
+                        <span> 🎥 </span>
+                        <span class="menu-collapsed">&nbsp;Video 3: The Future of AI </span>
+                    </a>
+                    <a href="#" id="1playground_link" class="list-group-item list-group-item-action text-white" style="display: flex; justify-content: center; align-items: center;" onclick="return check(this);">
+                        <span> 🎮 </span>
+                        <span class="menu-collapsed">&nbsp;Playground </span>
+                    </a>
+                    <a href="#" id="1codingactivity_link" class="list-group-item list-group-item-action text-white" style="display: flex; justify-content: center; align-items: center;" onclick="return check(this);">
+                        <span> 💻 </span>
+                        <span class="menu-collapsed">&nbsp;Coding Activity </span>
+                    </a>
+                    <a href="#" id="1quiz_link" class="list-group-item list-group-item-action text-white" style="display: flex; justify-content: center; align-items: center;" onclick="return check(this);">
+                        <span> 📝 </span>
+                        <span class="menu-collapsed">&nbsp;Quiz </span>
+                    </a>
+                    <a href="#" id="1curatedresources_link" class="list-group-item list-group-item-action text-white" style="display: flex; justify-content: center; align-items: center;" onclick="return check(this);">
+                        <span> 🗃 </span>
+                        <span class="menu-collapsed">&nbsp;Curated Resources </span>
+                    </a>
+                </div>
+                <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start" onclick="return check(this);"> 
+                    <span> 2. </span> 
+                    <span class="menu-collapsed">&nbsp;Search</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu2' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+                <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 3. </span> 
+                    <span class="menu-collapsed">&nbsp;Games</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu3' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+                <a href="#submenu4" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 4. </span> 
+                    <span class="menu-collapsed">&nbsp;Logical Agents</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu4' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+                <a href="#submenu5" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 5. </span> 
+                    <span class="menu-collapsed">&nbsp;Supervised Learning</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu5' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+                <a href="#submenu6" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 6. </span> 
+                    <span class="menu-collapsed">&nbsp;Unsupervised Learning</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu6' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+                <a href="#submenu7" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 7. </span> 
+                    <span class="menu-collapsed">&nbsp;Neural Networks</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu7' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>  
+                <a href="#submenu8" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 8. </span> 
+                    <span class="menu-collapsed">&nbsp;Reinforcement Learning</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a> 
+                <div id='submenu8' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+                <a href="#submenu9" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 9. </span> 
+                    <span class="menu-collapsed">&nbsp;Applications of AI</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a> 
+                <div id='submenu9' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+                <a href="#submenu10" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start"> 
+                    <span> 10. </span> 
+                    <span class="menu-collapsed">&nbsp;AI and Ethics</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </a>
+                <div id='submenu10' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action text-white">
+                        <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
+                    </a>
+                </div>
+            </ul>
         </div>
 
         <div id="contents">
-            <div style="width: 75%; margin: 0 auto; text-align: center; float: left; padding-top: 2.5%; padding-left: 1%;">
-                <iframe src="https://www.youtube.com/embed/YYt1_AiJi38" width="650px" height="475px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                <br/> <br/> <br/> 
-                <ul style='list-style: none;'> 
-                    <li style='font-size:25px'>COMING SOON:</li>
-                    <br/>
-                    <li style='font-size:25px'><a href=''>Quiz</a></li>
-                    <br/>
-                    <li style='font-size:25px'><a href=''>Book<a/></li>
-                    <br/>
-                    <li style='font-size:25px'><a href=''>TensorFlow Demo<a/></li>
-                </ul>
+            <div style="width: 70%; margin: 0 auto; padding-top: 7%;">
+                <p style="background-color: white; box-shadow: inset 0 0 2px #311b0b; text-align: left; font-size: 25px; font-family: Trebuchet MS, Helvetica, sans-serif; padding: 7.5px; border-radius: 5px;"> Welcome to Hi-AI's free, online curriculum for learning AI. There are no prerequisites, and no prior knowledge or experience is necessary in AI. The curriculum is comprehensive and rigorous, yet we designed it to be accessible to a wide range of the population regardless of age, gender, language, and wealth. <br/><br/> The curriculum is composed of 10 modules, and we recommend you to follow them in order. We also recommend you to check the <strong> Background </strong> section before you start the modules to equip yourself with the necessary skills for learning AI. You can navigate through the modules and all other content through the navigation bar at the left side of the screen. <br/><br/> Each module comes with short (~5-15 minutes) lecture videos (🎥), interactive playgrounds (🎮) where you can visualize the concepts and build a deeper understanding, coding activities (💻) in Python, quizzes (📝), and curated resources (🗃) for reading and learning more! </p>
             </div>
         </div>
-
     </div>
+
+    <div id="welcome_contents" hidden>
+        <div style="width: 70%; margin: 0 auto; padding-top: 7%;">
+            <p style="background-color: white; box-shadow: inset 0 0 2px #311b0b; text-align: left; font-size: 25px; font-family: Trebuchet MS, Helvetica, sans-serif; padding: 7.5px; border-radius: 5px;"> Welcome to Hi-AI's free, online curriculum for learning AI. There are no prerequisites, and no prior knowledge or experience is necessary in AI. The curriculum is comprehensive and rigorous, yet we designed it to be accessible to a wide range of the population regardless of age, gender, language, and wealth. <br/><br/> The curriculum is composed of 10 modules, and we recommend you to follow them in order. We also recommend you to check the <strong> Background </strong> section before you start the modules to equip yourself with the necessary skills for learning AI. You can navigate through the modules and all other content through the navigation bar at the left side of the screen. <br/><br/> Each module comes with short (~5-15 minutes) lecture videos (🎥), interactive playgrounds (🎮) where you can visualize the concepts and build a deeper understanding, coding activities (💻) in Python, quizzes (📝), and curated resources (🗃) for reading and learning more! </p>
+        </div>
+    </div>
+
+
+    <div id="1video1_contents" hidden>
+        <iframe style="padding-top: 10%;" src="https://www.youtube.com/embed/qlMOEf8oys4" width="630px" height="475px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div id="1video2_contents" hidden>
+        <iframe style="padding-top: 10%;" src="https://www.youtube.com/embed/VJtnE0CylyU" width="630px" height="475px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div id="1video3_contents" hidden>
+        <iframe style="padding-top: 10%;" src="https://www.youtube.com/embed/li1CmvNJK2Y" width="630px" height="475px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+
+    <div id='1quiz_contents' style="float: none; overflow: hidden; padding-top: 10%;">
+        <div class="quiz-container" style="width: 75%; margin: 0 auto; text-align: left;">
+            <div id="quiz"> </div>
+        </div>
+        <button id="previous"> Previous Question </button>
+        <button id="next"> Next Question </button>
+        <button id="submit"> Submit Quiz </button>
+        <div id="results"></div>
+    </div>
+    
 	
     <!-- jQuery -->
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -101,16 +264,323 @@
             var targ = e.target || e.srcElement || e;
             if (targ.nodeType == 3) targ = targ.parentNode; // defeat Safari bug
 
-            $('#topics a').removeClass();
-            e.className = "active";
+            $('#sidebar-container a').removeClass('active');
 
-            if (e.text == 'Introduction to AI') {
-                 $("#contents").html("<div style='width: 75%; margin: 0 auto; text-align: center; float: left; padding-top: 2.5%; padding-left: 1%;'><iframe src='https://www.youtube.com/embed/YYt1_AiJi38' width='650px' height='475px' frameborder='0' allow='autoplay; fullscreen' allowfullscreen></iframe> <br/>  <br/> <br/> <ul style='list-style: none;'> <li style='font-size:25px'>COMING SOON:</li><br/><li style='font-size:25px'><a href=''>Quiz</a></li><br/><li style='font-size:25px'><a href=''>Book<a/></li><br/><li style='font-size:25px'><a href=''>TensorFlow Demo<a/></li></ul> </div>");
-            }
-            else {
-                $("#contents").html("<div style='width: 75%; margin: 0 auto; text-align: center; float: left; padding-top: 15.0%; padding-left: 0%;'><p style='font-size: 50px; font-family: Trebuchet MS, Helvetica, sans-serif;'> COMING SOON! <p></div>");
-            }
+            e.className = "list-group-item list-group-item-action text-white active";
+            // NOTE: Make sure the parent element also gets "active" when sidebar collapsed, i.e. we want 1. Introduction to AI green when sidebar collapsed as well!
+
+            if (e.id == 'welcome_link') {$("#contents").html($("#welcome_contents").html()); $("#1quiz_contents").hide();}
+            else if (e.id == '1video1_link') {$("#contents").html($("#1video1_contents").html()); $("#1quiz_contents").hide();}
+            else if (e.id == '1video2_link') {$("#contents").html($("#1video2_contents").html()); $("#1quiz_contents").hide();}
+            else if (e.id == '1video3_link') {$("#contents").html($("#1video3_contents").html()); $("#1quiz_contents").hide();}
+            else if (e.id == '1quiz_link') {$("#contents").empty(); $("#1quiz_contents").show();}
+            else if (e.id == '1playground_link') {$("#contents").html($("#1playground_contents").html()); $("#1quiz_contents").hide();}
+            else if (e.id == '1codingactivity_link') {$("#contents").html($("#1codingactivity_contents").html()); $("#1quiz_contents").hide();}
+            else if (e.id == '1curatedresources_link') {$("#contents").html($("#1curatedresources_contents").html()); $("#1quiz_contents").hide();}
+            else {{$("#contents").html(); $("#1quiz_contents").hide();}}
         }
+
+        $(document).ready(function() {
+            $("#1quiz_contents").hide();
+
+            // Hide submenus
+            $('#body-row .collapse').collapse('hide'); 
+
+            // Collapse/Expand icon
+            $('#collapse-icon').addClass('fa-angle-double-left'); 
+
+            // Collapse click
+            $('[data-toggle=sidebar-colapse]').click(function() {
+                SidebarCollapse();
+            });
+
+            $('[data-toggle=collapse]').click(function() {
+                // $(this).toggleClass("active");      
+            });
+
+            function SidebarCollapse () {
+                $('.menu-collapsed').toggleClass('d-none');
+                $('.sidebar-submenu').toggleClass('d-none');
+                $('.submenu-icon').toggleClass('d-none');
+                $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+            
+                // Collapse/Expand icon
+                $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+            }
+
+            function buildQuiz() {
+                // variable to store the HTML output
+                const output = [];
+
+                // for each question...
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                    // variable to store the list of possible answers
+                    const answers = [];
+
+                    if (currentQuestion.correctAnswer == 'N/A') {
+                        answers.push(`<textarea id="free-response" name="free-response" rows="4" cols="50"></textarea>`);
+                    }
+                    else {
+                        is_multiple_choice = Array.isArray(currentQuestion.correctAnswer);
+
+                        // and for each available answer...
+                        for(letter in currentQuestion.answers) {
+                          // ...add an HTML radio button
+                          if (is_multiple_choice) {
+                            answers.push(
+                                `<label style="text-align: left; font-size: 22px; font-family: Trebuchet MS, Helvetica, sans-serif;">
+                                     <input type="checkbox" name="question${questionNumber}" value="${letter}">
+                                     ${currentQuestion.answers[letter]}
+                                </label>`
+                            );
+                          }
+                          else {
+                            answers.push(
+                                `<label style="text-align: left; font-size: 22px; font-family: Trebuchet MS, Helvetica, sans-serif;">
+                                     <input type="radio" name="question${questionNumber}" value="${letter}">
+                                     ${currentQuestion.answers[letter]}
+                                </label>`
+                            );
+                          }
+                        }
+                    }
+                    
+
+                    // add this question and its answers to the output
+                    output.push(
+                      `<div class="slide">
+                        <div class="question"> 
+                            <p style="text-align: left; font-size: 22px; font-family: Trebuchet MS, Helvetica, sans-serif; font-weight: bold;"> ${currentQuestion.title} </p> 
+                            <p style="text-align: left; font-size: 22px; font-family: Trebuchet MS, Helvetica, sans-serif; font-style: italic;"> ${currentQuestion.question} </p> 
+                        </div>
+                        <div class="answers"> <p style="text-align: left; font-size: 22px; font-family: Trebuchet MS, Helvetica, sans-serif;"> ${answers.join("")} </p> </div>
+                      </div>`
+                    ); 
+                });
+
+                // finally combine our output list into one string of HTML and put it on the page
+                quizContainer.innerHTML = output.join('');
+            }
+
+            function showResults(){
+
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      // if answer is correct
+      if(userAnswer === currentQuestion.correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      // if answer is wrong or blank
+      else{
+        // color the answers red
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `<p style="font-size: 22px; font-family: Trebuchet MS, Helvetica, sans-serif;"> ${numCorrect} out of ${myQuestions.length} </p>`;
+  }
+
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active-slide');
+    slides[n].classList.add('active-slide');
+    currentSlide = n;
+    if(currentSlide === 0){
+      previousButton.style.display = 'none';
+    }
+    else{
+      previousButton.style.display = 'inline-block';
+    }
+    if(currentSlide === slides.length-1){
+      nextButton.style.display = 'none';
+      submitButton.style.display = 'inline-block';
+    }
+    else{
+      nextButton.style.display = 'inline-block';
+      submitButton.style.display = 'none';
+    }
+  }
+
+  function showNextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function showPreviousSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  // Variables
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      title: "Question 1: Definition of AI and Schools of Thought",
+      question: "Which comment about the four schools of thought is NOT correct?",
+      answers: {
+        a: "Acting human-like: The Turing test approach closely aligns with this school of thought.",
+        b: "Thinking human-like: Cognitive science and modeling inspires this school of thought.",
+        c: "Thinking rationally: This school of thought is the most common approach to AI today.",
+        d: "Acting rationally: An agent that thinks rationally acts so as to achieve the best outcome."
+      },
+      correctAnswer: "c",
+      explanation: "The most common approach to AI today is acting rationally."
+    },
+    {
+      title: "Question 2: Turing Test",
+      question: "Which of the following scenarios can constitute a Turing test (check all that apply)?",
+      answers: {
+        a: "A machine and a human anonymously submit a letter each to a jury of humans, and the jury has to determine which letter belongs to the human.",
+        b: "A robot dances in front of a jury of professional dancers, and the jury ranks the performance of the robot out of 10.",
+        c: "A machine and a human drive a car each with opaque windows, and the jury of humans has to guess which car belongs to the human.",
+        d: "A robot and a human race in a 100 meters sprint, and the winner gets a special prize."
+      },
+      correctAnswer: ["a", "c"],
+      explanation: "A machine passes a Turing test if a human interrogator(s) cannot tell whether a certain act (based on language, perceptual abilities, etc.) is being performed by the machine or a human."
+    },
+    {
+      title: "Question 3: AI applications Case Study",
+      question: "Consider “DishMe”, a revolutionary AI to fill the dishwasher machine. DishMe can move around the kitchen. You put dirty dishes on the counter or in the sink or on top of the stove, and say no more, just push the button and DishMe will retrieve the dishes, pick them up, organize them in the dishwasher machine, and start a washing cycle. DishMe can handle all types of dishes and does a nifty good job at optimizing the space usage in the machine. What kind of AI applications is DishMe (check all that apply)?",
+      answers: {
+        a: "Robotics",
+        b: "Computer vision",
+        c: "Spoken language processing",
+        d: "Natural language processing",
+        e: "Planning",
+        f: "Games"
+      },
+      correctAnswer: ["a", "b", "e"],
+      explanation: "DishMe uses computer vision to tell what kind of dishes it's handling to put them in the machine, planning to organize the space inside the machine, and robotics to physically move the dishes."
+    },
+    {
+      title: "Question 4: AI History",
+      question: "What is the correct order of the events given below? <br /> <br /> a. Alan Turing published “Computing Machinery and Intelligence”. <br /> b. McCulloch and Pitts proposed a model for the neuron. <br /> c. Deep neural networks were invented and deep learning took over! <br /> d. AI research slowed down in a period known as the AI Winter. <br /> e. Frank Rosenblatt invented the Perceptron.",
+      answers: {
+        a: "a → b → d → e → c",
+        b: "b → a → e → d → c",
+        c: "b → a → e → d → c",
+        d: "a → e → b → c → d"
+      },
+      correctAnswer: "c",
+      explanation: ""
+    },
+    {
+      title: "Question 5: AI Winter",
+      question: "The reasons for AI Winter (1980 - 1990) are (check all that apply):",
+      answers: {
+        a: "Lack of computational power",
+        b: "Expert systems could NOT handle uncertainty",
+        c: "Expert systems could NOT incorporate domain knowledge",
+        d: "Expert systems could NOT learn from experience",
+        e: "Funds dried up",
+        f: "Use of toy examples could NOT scale up"
+      },
+      correctAnswer: ["a", "b", "d", "e", "f"],
+      explanation: ""
+    },
+    {
+      title: "Question 6: AI Spring",
+      question: "Recent AI success is due to a large extent to (check all that apply):",
+      answers: {
+        a: "Small and curated datasets",
+        b: "More computational power",
+        c: "Deep learning architectures",
+        d: "Using probability to model uncertainty",
+        e: "Machine learning",
+        f: "Multidisciplinary collaborations",
+        g: "Clean energy"
+      },
+      correctAnswer: ["b", "c", "d", "e", "f"],
+      explanation: ""
+    },
+    {
+      title: "Question 7: MP vs. Perceptron",
+      question: "The main differences between McCulloch & Pitts (MP) and Perceptron models are (check all that apply):",
+      answers: {
+        a: "Inputs to the MP are boolean (0 / 1), whereas inputs to the Perceptron can be any real value.",
+        b: "MP has a threshold that can be adjusted, whereas Perceptron has a fixed threshold.",
+        c: "Inputs are equally weighted in MP, whereas Perceptron can weigh inputs differently.",
+        d: "As opposed to the Perceptron, MP has a well-defined learning procedure."
+      },
+      correctAnswer: ["a", "c"],
+      explanation: ""
+    },
+    {
+      title: "Question 8: Interpretability",
+      question: "Why is interpretability an important requirement to develop an ethical AI (check all that apply)?",
+      answers: {
+        a: "Ensure AI models are as complex as possible so they perform well",
+        b: "Understand AI predictions",
+        c: "Ensure AI is fair",
+        d: "Advance science and our knowledge in general",
+        e: "Ensure AI is free",
+        f: "With transparent models, AI is more trusted and hence more used"
+      },
+      correctAnswer: ["b", "c", "d", "f"],
+      explanation: ""
+    },
+    {
+      title: "Question 9: AI Bias and Fairness",
+      question: "The lecture video states that AI models can be unfair. Which of the following is true (check all that apply)?",
+      answers: {
+        a: "Human discriminative decisions can find their ways in the data used to train AI models.",
+        b: "Data-driven models have the ability to reproduce patterns of past discrimination present in the data.",
+        c: "AI models are always fair and free of any bias.",
+        d: "Demographic disparities lead to the under-representation of some segments of our society (e.g., race, gender, etc.) in the data.",
+        e: "Decision-making based on AI can change the course of our lives and affect our access to opportunities (job, school, mortgage, healthcare, justice, etc.).",
+        f: "Because they are machine-generated, AI models do not have the ability to be unfair, unlike humans."
+      },
+      correctAnswer: ["a", "b", "d", "e"],
+      explanation: ""
+    },
+    {
+      title: "Question 10 AI Future",
+      question: "How do you think AI will affect the job / occupation / hobby that you want to do in the future? Can you think of one advantage and one disadvantage?",
+      correctAnswer: "N/A",
+      explanation: ""
+    },
+];
+
+  // Kick things off
+  buildQuiz();
+
+  // Pagination
+  const previousButton = document.getElementById("previous");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  // Show the first slide
+  showSlide(currentSlide);
+
+  // Event listeners
+  submitButton.addEventListener('click', showResults);
+  previousButton.addEventListener("click", showPreviousSlide);
+  nextButton.addEventListener("click", showNextSlide);
+
+        });
+
+
+
+
+
+
     </script>
 
 </body>
