@@ -78,16 +78,16 @@
                     <span class="submenu-icon ml-auto"></span>
                 </a>
                 <div id='submenu0' class="collapse sidebar-submenu">
-                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                    <a href="#" id="background1" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);">
                         <span class="menu-collapsed">Probability</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                    <a href="#" id="background2" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);">
                         <span class="menu-collapsed">Statistics</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                    <a href="#" id="background3" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);">
                         <span class="menu-collapsed">Linear Algebra</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                    <a href="#" id="background4" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);">
                         <span class="menu-collapsed">Programming</span>
                     </a>
                 </div>
@@ -348,6 +348,10 @@
             else if (e.id == 'topic10') {$("#contents").html($("#comingsoon").html());}
             else if (e.id == 'topic11') {$("#contents").html($("#comingsoon").html());}
             else if (e.id == 'topic12') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'background1') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'background2') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'background3') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'background4') {$("#contents").html($("#comingsoon").html());}
             else {{$("#contents").html(); $("#1quiz_contents").hide();}}
         }
 
