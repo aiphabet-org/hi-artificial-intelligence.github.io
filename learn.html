@@ -22,6 +22,8 @@
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
     <link href="css/custom.css" rel="stylesheet">
 
+    <link rel="icon" href="images/hiai.gif">
+
 </head>
 
 <body>
@@ -124,7 +126,7 @@
                         <span class="menu-collapsed">&nbsp;Curated Resources </span>
                     </a>
                 </div>
-                <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
+                <a href="#" id="topic2" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 2. </span> 
                     <span class="menu-collapsed">&nbsp;Search</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -134,7 +136,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>
-                <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic3" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 3. </span> 
                     <span class="menu-collapsed">&nbsp;Games</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -144,7 +146,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>
-                <a href="#submenu4" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic4" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 4. </span> 
                     <span class="menu-collapsed">&nbsp;Logical Agents</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -154,7 +156,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>
-                <a href="#submenu5" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic5" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 5. </span> 
                     <span class="menu-collapsed">&nbsp;Supervised Learning</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -164,7 +166,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>
-                <a href="#submenu6" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic6" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 6. </span> 
                     <span class="menu-collapsed">&nbsp;Unsupervised Learning</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -174,7 +176,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>
-                <a href="#submenu7" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic7" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 7. </span> 
                     <span class="menu-collapsed">&nbsp;Neural Networks</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -184,7 +186,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>  
-                <a href="#submenu8" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic8" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 8. </span> 
                     <span class="menu-collapsed">&nbsp;Reinforcement Learning</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -194,7 +196,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>
-                <a href="#submenu9" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic9" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 9. </span> 
                     <span class="menu-collapsed">&nbsp;Applications of AI</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -204,7 +206,7 @@
                         <span class="menu-collapsed" style="color: red;">COMING SOON!</span>
                     </a>
                 </div>
-                <a href="#submenu10" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action d-flex align-items-center"> 
+                <a href="#" id="topic10" class="list-group-item list-group-item-action d-flex align-items-center" onclick="return check(this);"> 
                     <span> 10. </span> 
                     <span class="menu-collapsed">&nbsp;AI and Ethics</span>
                     <span class="submenu-icon ml-auto"></span>
@@ -220,16 +222,16 @@
         <!-- NOTE: Use d-flex align-items-center for left-align, and flex-column align-items-start for center-align -->
 
         <div id="contents">
-            <div style="width: 70%; margin: 0 auto; padding-top: 7%;">
-                <p style="background-color: white; box-shadow: inset 0 0 2px #311b0b; text-align: left; font-size: 25px; font-family: Trebuchet MS, Helvetica, sans-serif; padding: 7.5px; border-radius: 5px;"> Welcome to Hi-AI's free, online curriculum for learning AI. There are no prerequisites, and no prior knowledge or experience is necessary in AI. The curriculum is comprehensive and rigorous, yet we designed it to be accessible to a wide range of the population regardless of age, gender, language, and wealth. <br/><br/> The curriculum is composed of 10 modules, and we recommend you to follow them in order. We also recommend you to check the <strong> Background </strong> section before you start the modules to equip yourself with the necessary skills for learning AI. You can navigate through the modules and all other content through the navigation bar at the left side of the screen. <br/><br/> Each module comes with short (~5-15 minutes) lecture videos (🎥), interactive playgrounds (🎮) where you can visualize the concepts and build a deeper understanding, coding activities (💻) in Python, quizzes (📝), and curated resources (🗃) for reading and learning more! </p>
+            <div style="width: 70%; margin: 0 auto; padding-top: 4%;">
+                <p style="background-color: white; box-shadow: inset 0 0 2px #311b0b; text-align: left; font-size: 25px; font-family: Trebuchet MS, Helvetica, sans-serif; padding: 7.5px; border-radius: 5px;"> Welcome to Hi-AI, a free online curriculum for learning Artificial Intelligence. There are no prerequisites, and no prior knowledge is required. The curriculum is comprehensive and rigorous, yet we designed it to be accessible and inclusive. <br/><br/> Hi-AI curriculum is composed of ten modules, and we recommend that you follow them in order. We also recommend you to check the <strong> Background </strong> section before you start the modules to equip yourself with the necessary skills for learning AI. You can navigate through the modules and all other content through the navigation bar on the left side of the screen. <br/><br/> Each module comes with <br/> 1. short (~5-15 minutes) lecture videos (🎥), <br/> 2. interactive playgrounds (🎮) where you can visualize the concepts and build a deeper understanding, <br/> 3. coding activities (💻) in Python, <br/> 4. quizzes (📝), and <br/> 5. curated resources (🗃) of reading materials. </p>
             </div>
 
         </div>
     </div>
 
     <div id="welcome_contents" hidden>
-        <div style="width: 70%; margin: 0 auto; padding-top: 7%;">
-            <p style="background-color: white; box-shadow: inset 0 0 2px #311b0b; text-align: left; font-size: 25px; font-family: Trebuchet MS, Helvetica, sans-serif; padding: 7.5px; border-radius: 5px;"> Welcome to Hi-AI's free, online curriculum for learning AI. There are no prerequisites, and no prior knowledge or experience is necessary in AI. The curriculum is comprehensive and rigorous, yet we designed it to be accessible to a wide range of the population regardless of age, gender, language, and wealth. <br/><br/> The curriculum is composed of 10 modules, and we recommend you to follow them in order. We also recommend you to check the <strong> Background </strong> section before you start the modules to equip yourself with the necessary skills for learning AI. You can navigate through the modules and all other content through the navigation bar at the left side of the screen. <br/><br/> Each module comes with short (~5-15 minutes) lecture videos (🎥), interactive playgrounds (🎮) where you can visualize the concepts and build a deeper understanding, coding activities (💻) in Python, quizzes (📝), and curated resources (🗃) for reading and learning more! </p>
+        <div style="width: 70%; margin: 0 auto; padding-top: 4%;">
+            <p style="background-color: white; box-shadow: inset 0 0 2px #311b0b; text-align: left; font-size: 25px; font-family: Trebuchet MS, Helvetica, sans-serif; padding: 7.5px; border-radius: 5px;"> Welcome to Hi-AI, a free online curriculum for learning Artificial Intelligence. There are no prerequisites, and no prior knowledge is required. The curriculum is comprehensive and rigorous, yet we designed it to be accessible and inclusive. <br/><br/> Hi-AI curriculum is composed of ten modules, and we recommend that you follow them in order. We also recommend you to check the <strong> Background </strong> section before you start the modules to equip yourself with the necessary skills for learning AI. You can navigate through the modules and all other content through the navigation bar on the left side of the screen. <br/><br/> Each module comes with <br/> 1. short (~5-15 minutes) lecture videos (🎥), <br/> 2. interactive playgrounds (🎮) where you can visualize the concepts and build a deeper understanding, <br/> 3. coding activities (💻) in Python, <br/> 4. quizzes (📝), and <br/> 5. curated resources (🗃) of reading materials. </p>
         </div>
     </div>
 
@@ -282,6 +284,13 @@
             </ul>
         </div>
     </div>
+
+    <div id="comingsoon" hidden>
+        <div style="width: 70%; margin: 0 auto; padding-top: 7%;">
+            <img src="images/comingsoon.png" width="400">
+            <h1 style="font-size: 50px; color: red;"> COMING SOON! </h1>
+        </div>
+    </div>
 	
     <!-- jQuery -->
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -308,6 +317,15 @@
             else if (e.id == '1playground_link') {$("#contents").html($("#1playground_contents").html());}
             else if (e.id == '1codingactivity_link') {$("#contents").html($("#1codingactivity_contents").html());}
             else if (e.id == '1curatedresources_link') {$("#contents").html($("#1curatedresources_contents").html());}
+            else if (e.id == 'topic2') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic3') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic4') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic5') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic6') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic7') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic8') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic9') {$("#contents").html($("#comingsoon").html());}
+            else if (e.id == 'topic10') {$("#contents").html($("#comingsoon").html());}
             else {{$("#contents").html(); $("#1quiz_contents").hide();}}
         }
 
