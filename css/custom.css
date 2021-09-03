@@ -204,7 +204,7 @@ p {
 
 /* Sidebar sizes when expanded and collapsed */
 .sidebar-expanded {
-    width: 300px;
+    width: 335px;
 }
 .sidebar-collapsed {
     width: 60px;
